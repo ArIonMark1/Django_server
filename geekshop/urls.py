@@ -19,7 +19,7 @@ import mainapp.views as mainapp
 
 urlpatterns = [
     path('', mainapp.main),
-    path('products', mainapp.products),
-    path('contact', mainapp.contact),
+    path('products/', mainapp.products),
+    path('contact/', mainapp.contact),
     path('admin/', admin.site.urls),
 ]

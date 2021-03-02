@@ -52,28 +52,29 @@
 				</div>
 				<!-- ======================== -->
 				<div class="description">
-					<h3 class="bigp>высочайший уровень
-						эргономики и прочность.</p>-bold"> {{ products.name }} </h3>
-<!--					<h3 class="big-bold">Отличный стул</h3>-->
-					<h3 class="red"> {{ products.propose }} </h3>>
-<!--					<h3 class="red">горячее предложение</h3>-->
-					<p class="price"> {{ products.price }} <span>руб</span></p>
-<!--					<p class="price"> 2585.9 <span>руб</span></p>-->
-					<a href="#" class="red-button">
-						заказать <i class="fa fa-chevron-right" aria-hidden="true"></i>
-					</a>
-					<div class="description-text">
-						<p>{{ products.description.headInfo }}</p>
-<!--						<p>Расположитесь комфортно.</p>-->
-						<p> {{ products.description.materialsInfo }} </p>
-<!--						<p>Отличное качество материалов-->
-<!--						позволит вам это.</p>-->
-						<p> {{ products.description.colors }} </p>
-<!--						<p>Различные цвета</p>-->
-						<p> {{ products.description.security }} </p>
-<!--						<p>высочайший уровень-->
-<!--						эргономики и прочность.</p>-->
-					</div>
+					{% for product in products %}
+						<h3 class="big-bold"> {{ product.name }} </h3>
+	<!--					<h3 class="big-bold">Отличный стул</h3>-->
+						<h3 class="red"> {{ product.propose }} </h3>
+	<!--					<h3 class="red">горячее предложение</h3>-->
+						<p class="price"> {{ product.price }} <span>руб</span></p>
+	<!--					<p class="price"> 2585.9 <span>руб</span></p>-->
+						<a href="#" class="red-button">
+							заказать <i class="fa fa-chevron-right" aria-hidden="true"></i>
+						</a>
+						<div class="description-text">
+							<p>{{ product.description.headInfo }}</p>
+	<!--						<p>Расположитесь комфортно.</p>-->
+							<p> {{ product.description.materialsInfo }} </p>
+	<!--						<p>Отличное качество материалов-->
+	<!--						позволит вам это.</p>-->
+							<p> {{ product.description.colors }} </p>
+	<!--						<p>Различные цвета</p>-->
+							<p> {{ product.description.security }} </p>
+	<!--						<p>высочайший уровень-->
+	<!--						эргономики и прочность.</p>-->
+						</div>
+					{% endfor %}
 				</div>
 				<!-- =========================== -->
 			</div>
